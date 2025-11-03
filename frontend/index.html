@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Chatbot - AI Health Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#4F46E5"/>
+                        <path d="M20 10V30M10 20H30" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <h1>SM NEXUS MEDBOT:</h1>
+                </div>
+                <button class="clear-btn" id="clearBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 4L4 16M4 4L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Clear Chat
+                </button>
+            </div>
+        </header>
+
+        <div class="disclaimer">
+            ⚠️ This chatbot provides general health information only. Always consult healthcare professionals for medical advice.
+        </div>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="welcome-message">
+                <div class="welcome-icon">🏥</div>
+                <h2>Welcome to SM NEXUS a Medical AI Assistant</h2>
+                <p>I'm here to help answer your health questions and provide general medical information.</p>
+                <div class="suggestions">
+                    <button class="suggestion-btn" data-message="What are the symptoms of common cold?">Common Cold Symptoms</button>
+                    <button class="suggestion-btn" data-message="How can I improve my sleep quality?">Sleep Tips</button>
+                    <button class="suggestion-btn" data-message="What are healthy eating habits?">Healthy Eating</button>
+                    <button class="suggestion-btn" data-message="How to manage stress effectively?">Stress Management</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Ask me about your health concerns..."
+                    rows="1"
+                ></textarea>
+                <button id="sendBtn" class="send-btn" disabled>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 8L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
